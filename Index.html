@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bing Search</title>
+    <title>Bing Search in Iframe</title>
     <style>
         /* General body style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -22,6 +22,7 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         /* Styling for the input field */
@@ -57,14 +58,26 @@
         #search-btn:hover {
             background-color: #005a8b; /* Darker blue */
         }
+
+        /* Iframe style */
+        #search-frame {
+            width: 80%;
+            height: 70vh;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <div class="search-container">
-        <form action="https://www.bing.com/search" method="get" target="_blank">
+        <form action="https://www.bing.com/search" method="get" target="search-frame">
             <input type="text" name="q" placeholder="Search with Bing..." id="search-input" required>
             <button type="submit" id="search-btn">Search</button>
         </form>
     </div>
+
+    <!-- Iframe for displaying search results -->
+    <iframe id="search-frame" name="search-frame"></iframe>
 </body>
 </html>
