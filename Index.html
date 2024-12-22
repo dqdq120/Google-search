@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bing Search</title>
+    <style>
+        /* General body style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Search container */
+        .search-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the input field */
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Focus effect on input */
+        #search-input:focus {
+            border-color: #0078d4; /* Bing's primary blue color */
+        }
+
+        /* Button styles */
+        #search-btn {
+            padding: 10px 15px;
+            margin-left: 10px;
+            font-size: 16px;
+            background-color: #0078d4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for button */
+        #search-btn:hover {
+            background-color: #005a8b; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <form action="https://www.bing.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Search with Bing..." id="search-input" required>
+            <button type="submit" id="search-btn">Search</button>
+        </form>
+    </div>
+</body>
+</html>
