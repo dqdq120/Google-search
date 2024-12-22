@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bing Search in Iframe</title>
+    <title>Search in Iframe</title>
     <style>
         /* General body style */
         body {
@@ -38,7 +38,7 @@
 
         /* Focus effect on input */
         #search-input:focus {
-            border-color: #0078d4; /* Bing's primary blue color */
+            border-color: #0078d4;
         }
 
         /* Button styles */
@@ -56,7 +56,7 @@
 
         /* Hover effect for button */
         #search-btn:hover {
-            background-color: #005a8b; /* Darker blue */
+            background-color: #005a8b;
         }
 
         /* Iframe style */
@@ -71,8 +71,8 @@
 </head>
 <body>
     <div class="search-container">
-        <form action="https://www.bing.com/search" method="get" target="search-frame">
-            <input type="text" name="q" placeholder="Search with Bing..." id="search-input" required>
+        <form action="https://duckduckgo.com/" method="get" target="search-frame">
+            <input type="text" name="q" placeholder="Search..." id="search-input" required>
             <button type="submit" id="search-btn">Search</button>
         </form>
     </div>
