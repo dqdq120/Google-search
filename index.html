@@ -71,18 +71,21 @@
 </head>
 <body>
     <div class="search-container">
-        
-            <input type="text" name="q" placeholder="Search..." id="search-input" required>
-            <button type="submit" id="search-btn">Search</button>
-       
+        <input type="text" name="q" placeholder="Search..." id="search-input" required>
+        <button type="submit" id="search-btn">Search</button>
     </div>
 
     <!-- Iframe for displaying search results -->
-    <iframe id="search-frame" name="s"></iframe>
+    <iframe id="search-frame" src="https://www.google.com/" name="s"></iframe>
+    
     <script>
-        document.getElementById('search-btn').addEventListener('click',e=>{
-            document.getElementById('search-frame').href='https://google.com/q='+document.getElementById('search-input').value
-        })
+        document.getElementById('search-btn').addEventListener('click', function() {
+            var query = document.getElementById('search-input').value;
+            if (query) {
+                var iframe = document.getElementById('search-frame');
+                iframe.src = 'https://www.bing.com/' + encodeURIComponent(query);
+            }
+        });
     </script>
 </body>
 </html>
