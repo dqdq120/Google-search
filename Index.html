@@ -78,6 +78,11 @@
     </div>
 
     <!-- Iframe for displaying search results -->
-    <iframe id="search-frame" name="search-frame"></iframe>
+    <iframe id="search-frame" name="s"></iframe>
+    <script>
+        document.getElementById('search-btn').addEventListener('click',e=>{
+            document.getElementById('search-frame').href='https://google.com/q='+document.getElementById('search-input').value
+        })
+    </script>
 </body>
 </html>
